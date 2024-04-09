@@ -1,0 +1,76 @@
+@import "map.less";
+@import "variaveis.less";
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+.dflex {
+    display: flex;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboco', sans-serif;
+}
+li {
+    list-style: @listagem;
+}
+
+header {
+    padding: 16px;
+    background-color: #colors[corFundoHeader];
+    .container {
+        .dflex();
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            .dflex();
+        }
+
+        li {
+            padding: 4px;
+            
+            a {
+                text-decoration: none;
+                background-color: #colors[corBotao];
+                color: #colors[corTexto];
+                padding: 8px;
+                border-radius: 10%;
+
+            }
+        }
+    }
+}
+
+section {
+    .container {
+        padding-top: 32px;
+        text-align: center;
+        
+
+        .product {
+            padding-top: 12px;
+            .dflex();
+            flex-direction: row;
+            
+
+            &-item {
+                h4 {
+                    padding-top: @padprod;
+                }
+                p {
+                    padding-top: @padprod;
+                    padding-bottom: @padprod;
+                }
+                a {
+                    text-decoration: none;
+                    background-color: #colors[corBotao];
+                    color: #colors[corTexto];
+                    padding: 8px;
+                    border-radius: 25px;
+                }
+            }
+            }
+        }
+    }
